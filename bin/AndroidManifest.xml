@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="cookbook.android.haptic"
+      android:versionCode="1"
+      android:versionName="1.0"
+      android:installLocation="auto">
+      
+   	<uses-sdk android:minSdkVersion="7" android:targetSdkVersion="9"/>
+      	
+   	<uses-permission android:name="android.permission.VIBRATE" />
+      	      	
+   	<uses-feature android:name="android.hardware.touchscreen" android:required="true" />
+      
+	<supports-screens android:smallScreens	="true"
+			  	      android:normalScreens	="true"
+			  	      android:largeScreens	="true"
+			  	      android:xlargeScreens	="true"
+			  	      android:anyDensity	="true" />
+	
+	<uses-configuration android:reqTouchScreen="stylus"/>
+	<uses-configuration android:reqTouchScreen="finger"/>
+	      
+    <application android:icon="@drawable/icon" 
+    			 android:label="@string/app_name"
+    			 android:debuggable="true"
+    			 android:name="cookbook.android.haptic.HapticApplication" >
+    			 
+	    <activity android:name="cookbook.android.haptic.activity.MainActivity" 
+	    		  android:label="@string/app_name">
+         	<intent-filter>
+               <action android:name="android.intent.action.MAIN" />
+               <category android:name="android.intent.category.LAUNCHER" />
+         	</intent-filter>
+    	</activity>
+    </application>
+
+</manifest> 
